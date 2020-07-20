@@ -1,6 +1,6 @@
 class API {
     // render all warehouses to index page 
-    static loadFridges() {
+    static loadWarehouses() {
       fetch(`http://localhost:3000/warehouses`)
         .then(res => res.json())
         .then(warehouseData => {
@@ -10,4 +10,4 @@ class API {
         }})
     };
   
-  };
+};
