@@ -33,3 +33,12 @@ input[type="submit"] {
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: #27a8f7;
 }
+
+#warehouse-form-container {
+    background-color: lightgrey;
+    border: 1px solid black;
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    padding: 0.5em;
+}
