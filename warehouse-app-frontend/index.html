@@ -12,7 +12,26 @@
 <body>
     <h1 style="text-align: center;">Welcome to Warehouse Manager</h1>
     <div id="warehouse-form-container">
-
+        <h3>Create a New Warehouse</h3>
+	    <form id="warehouse-form">
+            <input type="text" name="name" placeholder="name" />
+            <br />
+            <input type="number" name="capacity" placeholder="capacity" min=0 />
+            <br />
+            <br />
+            <strong>Would you like to add a warehouse item?</strong>
+            <br>
+            <input type="text" name="name" placeholder="item name" />
+            <br />
+            <input type="text" name="description" placeholder="short description" />
+            <br />
+            <input type="number" name="price" placeholder="price per unit" />
+            <br />
+            <input type="number" name="quantity" placeholder="quantity" min=0 />
+            <br />
+            <br />
+            <input type="submit" value="Create Warehouse" />
+          </form>
     </div>
 
 </body>
