@@ -5,7 +5,7 @@ class API {
         .then(res => res.json())
         .then(warehouseData => {
           for(let whs of warehouseData) {
-            const {name, capacity, whs_items, id} = warehouse;
+            const {name, capacity, whs_items, id} = whs;
             new Warehouse(name, capacity, whs_items, id);
         }})
     };
