@@ -42,3 +42,15 @@ input[type="submit"] {
     margin: auto;
     padding: 0.5em;
 }
+
+#warehouse-container {
+    background-color: #add8e6;
+    border: 1px solid;
+    border-radius: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
