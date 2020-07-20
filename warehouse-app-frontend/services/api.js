@@ -9,5 +9,33 @@ class API {
             new Warehouse(name, capacity, whs_items, id);
         }})
     };
+
+    static addWarehouse(e) {
+        e.preventDefault();
+        let data = {
+          'name': e.target.name[0].value,
+          'capacity': parseInt(e.target.capacity.value),
+          'whs_items_attributes': [{
+            'name': e.target.name[1].value,
+            'description': e.target.description.value,
+            'price': parseInt(e.target.price.value),
+            'quantity': parseInt(e.target.quantity.value)
+          }]
+        };
+    
+        fetch(`http://localhost:3000/warehouses`, {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+          .then(res => res.json())
+          .then(warehouse => {
+            const {name, capacity, whs_items, id} = warehouse;
+            new Warehouse(name, capacity, whs_items, id);
+            document.getElementById('warehouse-form').reset();
+          })
+      };
   
 };
