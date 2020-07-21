@@ -95,5 +95,7 @@ input[type="submit"] {
 .whs-item-card {
     background-color: #a5bf36;
     border: 1px solid black;
-
+    padding: 1em;
+    margin: 1em auto;
+    width: 60%;
 }
