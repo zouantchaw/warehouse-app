@@ -62,7 +62,7 @@ class WhsItem {
     };
 
 
-    // takes an item and warehouse and adds the item to that fridge
+    // takes an item and warehouse and adds the item to that warehouse
     static addItemToWarehouse(warehouse, item) {
         const {name, description, price, quantity} = item;
         const newWhsItem = new WhsItem(name, description, price, quantity);
