@@ -62,8 +62,8 @@ class API {
         let data = {
             'whs_items_attributes': [{
             'name': e.target.name.value,
-            'whs_group': whsGroupSelectBox.options[whsGroupSelectBox.selectedIndex].value,
-            'expiration_date': e.target.expiration_date.value,
+            'description': e.target.description.value,
+            'price': parseInt(e.target.price.value),
             'quantity': parseInt(e.target.quantity.value)
             }]
         };
