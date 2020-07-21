@@ -37,5 +37,18 @@ class API {
             document.getElementById('warehouse-form').reset();
           })
       };
+
+    // delete our warehouses
+    static deleteWarehouse(warehouseID) {
+        fetch(`http://localhost:3000/warehouse/${warehouseID}`, {method: "DELETE"});
+        document.getElementsByClassName('warehouse-card')[warehouseID-1].remove();
+        return "The warehouse was deleted!";
+    };
+
+    static deleteWhsItem(whsItemID) {
+        fetch(`http://localhost:3000/whs_items/${whsItemID}`, {method: "DELETE"});
+        document.getElementById(whsItemID.toString()).remove();
+        return "The whs item was deleted!";
+    };   
   
 };
