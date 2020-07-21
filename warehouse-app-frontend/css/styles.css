@@ -63,3 +63,10 @@ input[type="submit"] {
     margin: 1em;
     width: 40%;
 }
+
+.add-whs-item-btn {
+    margin-left: 0.5em;
+    color: #fff;
+    background-color: #27a8f7;
+\
+}
