@@ -5,8 +5,7 @@
 This is a single-page application that renders/ displays content with Javascript  
 (the frontend) and manages local API data via Rails (the backend).
 
-Users can track which foods are about to expire in their fridge (organized by  
-expiration date).
+Users can create and add items to a Warehouse.
 
 
 # **Installation**
