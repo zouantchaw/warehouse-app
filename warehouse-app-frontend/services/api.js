@@ -50,5 +50,41 @@ class API {
         document.getElementById(whsItemID.toString()).remove();
         return "The whs item was deleted!";
     };   
+
+    //add whs item
+    static addWhsItem(warehouseCard, warehouseID) {
+        let newWhsItemForm = warehouseCard.getElementsByTagName('form')[0];
+        newWhsItemForm.style.display="block";
+
+        newWhsItemForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let whsGroupSelectBox = e.target.getElementsByTagName("select")[0]
+        let data = {
+            'whs_items_attributes': [{
+            'name': e.target.name.value,
+            'whs_group': whsGroupSelectBox.options[whsGroupSelectBox.selectedIndex].value,
+            'expiration_date': e.target.expiration_date.value,
+            'quantity': parseInt(e.target.quantity.value)
+            }]
+        };
+        fetch(`http://localhost:3000/warehouses/${warehouseID}`, {
+            method: "PATCH",
+            headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => {
+            const currentWarehouse = document.getElementsByClassName('warehouse-card')[result.id-1]
+            const whsItemsContainer = currentWarehouse.querySelector("#whs-items-container");
+            let newWhsItem = result.whs_items[result.whs.length-1];
+            WhsItem.addItemToWarehouse(currentWarehouse, newWhsItem)
+        });
+        });
+
+
+
+    };
   
 };
