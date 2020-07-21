@@ -99,3 +99,10 @@ input[type="submit"] {
     margin: 1em auto;
     width: 60%;
 }
+
+.whs-item-delete-btn {
+    margin-top: 1.5em;
+    color: #fff;
+    background-color: red;
+
+  }
