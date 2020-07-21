@@ -54,3 +54,9 @@ input[type="submit"] {
     width: 80%;
     margin: auto;
 }
+
+.warehouse-card {
+    background-color: #bac3e0;
+    border: 1px solid;
+    border-radius: 0.5em;
+  }
